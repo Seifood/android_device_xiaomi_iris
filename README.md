@@ -1,4 +1,4 @@
-#Device tree for Redmi Note 10 JE 5G (iris)
+# Device tree for Redmi Note 10 JE 5G (iris)
 
 
 ## Device specifications
