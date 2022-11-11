@@ -1,0 +1,14 @@
+libqti-perfd-client.so
+libadsprpc.so
+libcdsprpc.so
+libsdsprpc.so
+libfastcvopt.so
+liblistensoundmodel2.so
+libOpenCL.so
+
+libmialgoengine.so 64
+libmpbase.so
+libarcsoft_portrait_lighting.so 64
+libarcsoft_portrait_lighting_c.so 64
+libarcsoft_dualcam_refocus_image.so 64
+libarcsoft_dualcam_refocus_video.so 64
