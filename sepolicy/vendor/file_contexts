@@ -6,7 +6,7 @@
 /mnt/vendor/persist/audio/aw_cali.bin							u:object_r:vendor_persist_audio_file:s0
 
 # Battery
-/vendor/bin/batterysecret								u:object_r:batterysecret_exec:s0
+#/vendor/bin/batterysecret								u:object_r:batterysecret_exec:s0
 /mnt/vendor/persist/subsys(/.*)?							u:object_r:persist_subsys_file:s0
 
 # Bluetooth
