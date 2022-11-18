@@ -392,7 +392,7 @@ PRODUCT_PACKAGES += \
 
 # Rootdir
 PRODUCT_PACKAGES += \
-    init.batterysecret.rc \
+    init.logcat.rc \
     init.class_main.sh \
     init.mi.btmac.sh \
     init.kernel.post_boot.sh \
