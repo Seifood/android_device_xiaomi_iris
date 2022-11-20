@@ -114,6 +114,8 @@ vendor/lib/soundfx/libshoebox.so
 # Audio Effects
 vendor/lib/soundfx/libmisoundfx.so
 vendor/lib64/soundfx/libmisoundfx.so
+vendor/lib/libQTEEConnector_listener.so
+vendor/lib64/libQTEEConnector_listener.so
 
 # Audio Hardware
 vendor/lib/hw/audio.primary.holi.so
