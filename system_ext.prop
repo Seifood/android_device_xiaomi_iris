@@ -1,6 +1,5 @@
-persist.sys.usb.config=none
+# Camera
+persist.vendor.camera.expose.aux=1
+
+# DPM
 persist.vendor.dpm.feature=11
-ro.product.marketname=Redmi Note 10 JE
-ro.product.system_ext.marketname=Redmi Note 10 JE
-ro.telephony.sim_slots.count=1
-telephony.active_modems.max_count=2
