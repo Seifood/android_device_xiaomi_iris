@@ -138,6 +138,18 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.ir@1.0-impl \
     android.hardware.ir@1.0-service
+    
+# Dex
+ART_BUILD_HOST_DEBUG := false
+ART_BUILD_HOST_NDEBUG := true
+ART_BUILD_TARGET_DEBUG := false
+ART_BUILD_TARGET_NDEBUG := true
+PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
+PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := verify
+PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
+PRODUCT_DEXPREOPT_SPEED_APPS += \
+    SystemUI \
+    Settings
 
 # Display
 PRODUCT_PACKAGES += \
