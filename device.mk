@@ -289,15 +289,11 @@ PRODUCT_COPY_FILES += \
 
 # Media
 PRODUCT_PACKAGES += \
-    android.hardware.media.omx@1.0-impl \
-    android.hardware.media.omx@1.0-service
-
-PRODUCT_PACKAGES += \
     libavservices_minijail \
     libavservices_minijail.vendor \
-    libavservices_minijail_vendor
-
-PRODUCT_PACKAGES += \
+    libavservices_minijail_vendor \
+    libcodec2_hidl@1.1.vendor \
+    libmm-omxcore \
     libOmxAacEnc \
     libOmxAmrEnc \
     libOmxCore \
@@ -305,13 +301,11 @@ PRODUCT_PACKAGES += \
     libOmxG711Enc \
     libOmxQcelp13Enc \
     libOmxVdec \
-    libOmxVenc
-
-PRODUCT_PACKAGES += \
+    libOmxVenc \
     libstagefrighthw \
-    libstagefrighthw_omx \
-    libstagefrighthw_foundation \
-    libstagefright_omx.vendor
+    libstagefright_omx \
+    libstagefright_foundation \
+    libstagefright_softomx.vendor
 
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/media/,$(TARGET_COPY_OUT_VENDOR)/etc) \
