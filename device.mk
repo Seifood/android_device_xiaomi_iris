@@ -83,11 +83,11 @@ PRODUCT_PACKAGES += \
     s-gsi.avbpubkey
 
 # APN
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/apns-conf-p.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/apns-conf.xml \
-    $(LOCAL_PATH)/configs/apns-conf-s.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/apns-conf.xml \
-    $(LOCAL_PATH)/configs/fiveG-apns-conf.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/fiveG-apns-conf.xml \
-    $(LOCAL_PATH)/configs/spn-conf.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/spn-conf.xml
+#PRODUCT_COPY_FILES += \
+    #$(LOCAL_PATH)/configs/apns-conf-p.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/apns-conf.xml \
+    #$(LOCAL_PATH)/configs/apns-conf-s.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/apns-conf.xml \
+    #$(LOCAL_PATH)/configs/fiveG-apns-conf.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/fiveG-apns-conf.xml \
+    #$(LOCAL_PATH)/configs/spn-conf.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/spn-conf.xml
 
 # Bluetooth
 PRODUCT_PACKAGES += \
@@ -197,8 +197,8 @@ PRODUCT_PACKAGES += \
     fs_config_files
 
 # Fingerprint
-PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.1-service.xiaomi_iris
+#PRODUCT_PACKAGES += \
+    #android.hardware.biometrics.fingerprint@2.1-service.xiaomi_iris
 
 # FM
 PRODUCT_PACKAGES += \
@@ -272,8 +272,8 @@ PRODUCT_PACKAGES += \
     liboffloadhal
 
     # IRSC
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/sec_config:$(TARGET_COPY_OUT_VENDOR)/etc/sec_config
+#PRODUCT_COPY_FILES += \
+    #$(LOCAL_PATH)/configs/sec_config:$(TARGET_COPY_OUT_VENDOR)/etc/sec_config
 
 # Keymaster
 PRODUCT_PACKAGES += \
@@ -311,15 +311,6 @@ PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/media/,$(TARGET_COPY_OUT_VENDOR)/etc) \
     $(LOCAL_PATH)/configs/media/media_profiles.xml:$(TARGET_COPY_OUT_ODM)/etc/media_profiles_V1_0.xml
 
-PRODUCT_COPY_FILES += \
-    frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_audio.xml \
-    frameworks/av/media/libstagefright/data/media_codecs_google_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_c2.xml \
-    frameworks/av/media/libstagefright/data/media_codecs_google_c2_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_c2_audio.xml \
-    frameworks/av/media/libstagefright/data/media_codecs_google_c2_video.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_c2_video.xml \
-    frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_telephony.xml \
-    frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_video.xml \
-    frameworks/av/media/libstagefright/data/media_codecs_google_video_le.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_video_le.xml
-
 # Mlipay
 PRODUCT_PACKAGES += \
     vendor.xiaomi.hardware.mlipay@1.1.vendor \
@@ -347,8 +338,7 @@ PRODUCT_PACKAGES += \
 
 # Overlays
 PRODUCT_PACKAGES += \
-    CarrierConfigOverlay \
-    WifiOverlay   
+    CarrierConfigOverlay \   
 
 # Partitions
 PRODUCT_BUILD_SUPER_PARTITION := false
