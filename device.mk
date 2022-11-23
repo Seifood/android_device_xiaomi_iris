@@ -282,6 +282,7 @@ PRODUCT_COPY_FILES += \
 
 # Media
 PRODUCT_PACKAGES += \
+    android.hardware.media.omx@1.0 \
     libavservices_minijail \
     libavservices_minijail.vendor \
     libavservices_minijail_vendor \
