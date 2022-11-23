@@ -1,6 +1,8 @@
 <!--
     Input:
         manifest.xml
+        manifest.xml
+        manifest_vendor.nxp.hardware_pn557.xml
 -->
 <manifest version="2.0" type="device" target-level="5">
     <hal format="hidl">
@@ -36,21 +38,12 @@
     <hal format="hidl">
         <name>android.hardware.bluetooth.audio</name>
         <transport>hwbinder</transport>
-        <version>2.0</version>
+        <version>2.1</version>
         <interface>
             <name>IBluetoothAudioProvidersFactory</name>
             <instance>default</instance>
         </interface>
-        <fqname>@2.0::IBluetoothAudioProvidersFactory/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>android.hardware.biometrics.fingerprint</name>
-        <transport>hwbinder</transport>
-        <version>2.1</version>
-        <interface>
-            <name>IBiometricsFingerprint</name>
-            <instance>default</instance>
-        </interface>
+        <fqname>@2.1::IBluetoothAudioProvidersFactory/default</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.camera.provider</name>
@@ -61,12 +54,6 @@
             <instance>legacy/0</instance>
         </interface>
         <fqname>@2.4::ICameraProvider/legacy/0</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>android.hardware.drm</name>
-        <transport>hwbinder</transport>
-        <fqname>@1.3::ICryptoFactory/wfdhdcp</fqname>
-        <fqname>@1.3::IDrmFactory/wfdhdcp</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.gatekeeper</name>
@@ -124,20 +111,12 @@
         <fqname>@1.0::IMemtrack/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>android.hardware.nfc</name>
-        <transport>hwbinder</transport>
-        <version>1.2</version>
-        <interface>
-            <name>INfc</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.2::INfc/default</fqname>
-    </hal>
-    <hal format="hidl">
         <name>android.hardware.radio</name>
         <transport>hwbinder</transport>
         <fqname>@1.2::ISap/slot1</fqname>
+        <fqname>@1.2::ISap/slot2</fqname>
         <fqname>@1.5::IRadio/slot1</fqname>
+        <fqname>@1.5::IRadio/slot2</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.radio.config</name>
@@ -156,16 +135,10 @@
         <interface>
             <name>ISecureElement</name>
             <instance>SIM1</instance>
-            <instance>eSE1</instance>
+            <instance>SIM2</instance>
         </interface>
         <fqname>@1.2::ISecureElement/SIM1</fqname>
-        <fqname>@1.2::ISecureElement/eSE1</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>android.hardware.soundtrigger</name>
-        <transport>hwbinder</transport>
-        <fqname>@2.0::ISoundTriggerHw/default</fqname>
-        <fqname>@2.3::ISoundTriggerHw/default</fqname>
+        <fqname>@1.2::ISecureElement/SIM2</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.tetheroffload.config</name>
@@ -186,16 +159,6 @@
             <instance>default</instance>
         </interface>
         <fqname>@1.0::IOffloadControl/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>com.dsi.ant</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IAnt</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::IAnt/default</fqname>
     </hal>
     <hal format="hidl">
         <name>com.qualcomm.qti.dpm.api</name>
@@ -228,6 +191,26 @@
         <fqname>@2.3::IUceService/com.qualcomm.qti.uceservice</fqname>
     </hal>
     <hal format="hidl">
+        <name>interfaces.factoryAta</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IFactoryAta</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.0::IFactoryAta/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>interfaces.factoryInterface</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IFactoryInterface</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.0::IFactoryInterface/default</fqname>
+    </hal>
+    <hal format="hidl">
         <name>vendor.qti.data.factory</name>
         <transport>hwbinder</transport>
         <version>2.2</version>
@@ -250,12 +233,11 @@
     <hal format="hidl">
         <name>vendor.qti.hardware.bluetooth_audio</name>
         <transport>hwbinder</transport>
-        <version>2.0</version>
+        <version>2.1</version>
         <interface>
             <name>IBluetoothAudioProvidersFactory</name>
             <instance>default</instance>
         </interface>
-        <fqname>@2.0::IBluetoothAudioProvidersFactory/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.bluetooth_sar</name>
@@ -266,28 +248,6 @@
             <instance>default</instance>
         </interface>
         <fqname>@1.1::IBluetoothSar/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.silead.hardware.fingerprintext</name>
-        <transport>hwbinder</transport>
-         <version>1.0</version>
-        <interface>
-            <name>ISileadFingerprint</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.goodix.hardware.biometrics.fingerprint</name>
-        <transport>hwbinder</transport>
-        <version>2.1</version>
-        <interface>
-            <name>IGoodixFingerprintDaemon</name>
-            <instance>default</instance>
-        </interface>
-        <interface>
-            <name>IGoodixFingerprintDaemonExt</name>
-            <instance>default</instance>
-        </interface>
     </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.btconfigstore</name>
@@ -336,8 +296,10 @@
         <interface>
             <name>IDataConnection</name>
             <instance>slot1</instance>
+            <instance>slot2</instance>
         </interface>
         <fqname>@1.1::IDataConnection/slot1</fqname>
+        <fqname>@1.1::IDataConnection/slot2</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.data.iwlan</name>
@@ -346,8 +308,10 @@
         <interface>
             <name>IIWlan</name>
             <instance>slot1</instance>
+            <instance>slot2</instance>
         </interface>
         <fqname>@1.0::IIWlan/slot1</fqname>
+        <fqname>@1.0::IIWlan/slot2</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.data.latency</name>
@@ -368,6 +332,16 @@
             <instance>dspservice</instance>
         </interface>
         <fqname>@1.0::IDspService/dspservice</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.qti.hardware.eid</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IEid</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.0::IEid/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.embmssl</name>
@@ -471,18 +445,22 @@
         <interface>
             <name>IQcRilAudio</name>
             <instance>slot1</instance>
+            <instance>slot2</instance>
         </interface>
         <fqname>@1.0::IQcRilAudio/slot1</fqname>
+        <fqname>@1.0::IQcRilAudio/slot2</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.radio.ims</name>
         <transport>hwbinder</transport>
-        <version>1.6</version>
+        <version>1.7</version>
         <interface>
             <name>IImsRadio</name>
             <instance>imsradio0</instance>
+            <instance>imsradio1</instance>
         </interface>
-        <fqname>@1.6::IImsRadio/imsradio0</fqname>
+        <fqname>@1.7::IImsRadio/imsradio0</fqname>
+        <fqname>@1.7::IImsRadio/imsradio1</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.radio.internal.deviceinfo</name>
@@ -501,8 +479,22 @@
         <interface>
             <name>IUimLpa</name>
             <instance>UimLpa0</instance>
+            <instance>UimLpa1</instance>
         </interface>
         <fqname>@1.1::IUimLpa/UimLpa0</fqname>
+        <fqname>@1.1::IUimLpa/UimLpa1</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.qti.hardware.radio.qcriNvOpt</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IqcriNvOpt</name>
+            <instance>qcrinvopt0</instance>
+            <instance>qcrinvopt1</instance>
+        </interface>
+        <fqname>@1.0::IqcriNvOpt/qcrinvopt0</fqname>
+        <fqname>@1.0::IqcriNvOpt/qcrinvopt1</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.radio.qcrilhook</name>
@@ -511,8 +503,10 @@
         <interface>
             <name>IQtiOemHook</name>
             <instance>oemhook0</instance>
+            <instance>oemhook1</instance>
         </interface>
         <fqname>@1.0::IQtiOemHook/oemhook0</fqname>
+        <fqname>@1.0::IQtiOemHook/oemhook1</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.radio.qtiradio</name>
@@ -521,8 +515,10 @@
         <interface>
             <name>IQtiRadio</name>
             <instance>slot1</instance>
+            <instance>slot2</instance>
         </interface>
         <fqname>@1.0::IQtiRadio/slot1</fqname>
+        <fqname>@1.0::IQtiRadio/slot2</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.radio.qtiradio</name>
@@ -531,8 +527,10 @@
         <interface>
             <name>IQtiRadio</name>
             <instance>slot1</instance>
+            <instance>slot2</instance>
         </interface>
         <fqname>@2.6::IQtiRadio/slot1</fqname>
+        <fqname>@2.6::IQtiRadio/slot2</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.radio.uim</name>
@@ -541,8 +539,10 @@
         <interface>
             <name>IUim</name>
             <instance>Uim0</instance>
+            <instance>Uim1</instance>
         </interface>
         <fqname>@1.2::IUim/Uim0</fqname>
+        <fqname>@1.2::IUim/Uim1</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.radio.uim_remote_client</name>
@@ -551,8 +551,10 @@
         <interface>
             <name>IUimRemoteServiceClient</name>
             <instance>uimRemoteClient0</instance>
+            <instance>uimRemoteClient1</instance>
         </interface>
         <fqname>@1.0::IUimRemoteServiceClient/uimRemoteClient0</fqname>
+        <fqname>@1.0::IUimRemoteServiceClient/uimRemoteClient1</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.radio.uim_remote_server</name>
@@ -561,8 +563,10 @@
         <interface>
             <name>IUimRemoteServiceServer</name>
             <instance>uimRemoteServer0</instance>
+            <instance>uimRemoteServer1</instance>
         </interface>
         <fqname>@1.0::IUimRemoteServiceServer/uimRemoteServer0</fqname>
+        <fqname>@1.0::IUimRemoteServiceServer/uimRemoteServer1</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.sensorscalibrate</name>
@@ -605,29 +609,24 @@
         <fqname>@1.0::IWifiStats/wifiStats</fqname>
     </hal>
     <hal format="hidl">
-        <name>vendor.qti.hardware.wifidisplaysession</name>
+        <name>vendor.qti.hardware.wigig.netperftuner</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
         <interface>
-            <name>IWifiDisplaySession</name>
-            <instance>wifidisplaysession</instance>
+            <name>INetPerfTuner</name>
+            <instance>default</instance>
         </interface>
+        <fqname>@1.0::INetPerfTuner/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.qti.hardware.wigig.supptunnel</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
         <interface>
-            <name>IWifiDisplaySessionAudioTrack</name>
-            <instance>wifidisplaysessionaudiotrack</instance>
+            <name>ISuppTunnelProvider</name>
+            <instance>default</instance>
         </interface>
-        <interface>
-            <name>IWifiDisplaySessionImageTrack</name>
-            <instance>wifidisplaysessionimagetrack</instance>
-        </interface>
-        <interface>
-            <name>IWifiDisplaySessionVideoTrack</name>
-            <instance>wifidisplaysessionvideotrack</instance>
-        </interface>
-        <fqname>@1.0::IWifiDisplaySession/wifidisplaysession</fqname>
-        <fqname>@1.0::IWifiDisplaySessionAudioTrack/wifidisplaysessionaudiotrack</fqname>
-        <fqname>@1.0::IWifiDisplaySessionImageTrack/wifidisplaysessionimagetrack</fqname>
-        <fqname>@1.0::IWifiDisplaySessionVideoTrack/wifidisplaysessionvideotrack</fqname>
+        <fqname>@1.0::ISuppTunnelProvider/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.qti.ims.callinfo</name>
@@ -669,8 +668,4 @@
         </interface>
         <fqname>@1.0::IQspmhal/default</fqname>
     </hal>
-    <sepolicy>
-        <version>32.0</version>
-    </sepolicy>
-    <kernel target-level="5"/>
 </manifest>
