@@ -543,6 +543,10 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/wifi/,$(TARGET_COPY_OUT_VENDOR)/etc/wifi)
+    
+# XiaomiParts
+PRODUCT_PACKAGES += \
+    XiaomiParts
 
 # Inherit the proprietary files
 include vendor/xiaomi/iris/iris-vendor.mk
