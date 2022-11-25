@@ -30,7 +30,6 @@ CLEAN_VENDOR=true
 KANG=
 SECTION=
 
-
 while [ "${#}" -gt 0 ]; do
     case "${1}" in
         -n | --no-cleanup )
@@ -54,18 +53,9 @@ if [ -z "${SRC}" ]; then
     SRC="adb"
 fi
 
-function blob_fixup() {
-    case "${1}" in
-        vendor/lib64/camera/components/com.qti.node.mialgocontrol.so)
-            llvm-strip --strip-debug  "${2}"
-            ;;
-    esac
-}
-
 # Initialize the helper
-setup_vendor "${DEVICE}" "${VENDOR}" "${ANDROID_ROOT}" true "${CLEAN_VENDOR}"
+setup_vendor "${DEVICE}" "${VENDOR}" "${ANDROID_ROOT}" false "${CLEAN_VENDOR}"
 
-extract "${MY_DIR}/proprietary-files.txt" "${SRC}" \
-        "${KANG}" --section "${SECTION}"
+extract "${MY_DIR}/proprietary-files.txt" "${SRC}" "${KANG}" --section "${SECTION}"
 
 "${MY_DIR}/setup-makefiles.sh"
