@@ -172,40 +172,10 @@ PRODUCT_PACKAGES += \
 
 # Display
 PRODUCT_PACKAGES += \
-    android.hardware.graphics.common-V1-ndk_platform.vendor \
     android.hardware.graphics.mapper@3.0-impl-qti-display \
     android.hardware.graphics.mapper@4.0-impl-qti-display \
     android.hardware.memtrack@1.0-impl \
     android.hardware.memtrack@1.0-service \
-    init.qti.display_boot.sh \
-    libdisplayconfig.qti \
-    libdisplayconfig.qti.vendor \
-    libmemutils \
-    libqdMetaData \
-    libsdmcore \
-    libsdmutils \
-    libtinyxml \
-    memtrack.default \
-    vendor.display.config@1.0 \
-    vendor.display.config@1.0.vendor \
-    vendor.display.config@1.1.vendor \
-    vendor.display.config@1.2.vendor \
-    vendor.display.config@1.3.vendor \
-    vendor.display.config@1.4.vendor \
-    vendor.display.config@1.5.vendor \
-    vendor.display.config@1.6.vendor \
-    vendor.display.config@1.7.vendor \
-    vendor.display.config@1.8.vendor \
-    vendor.display.config@1.9.vendor \
-    vendor.display.config@1.10.vendor \
-    vendor.display.config@1.11.vendor \
-    vendor.display.config@1.12.vendor \
-    vendor.display.config@1.13.vendor \
-    vendor.display.config@1.14.vendor \
-    vendor.display.config@1.15.vendor \
-    vendor.display.config@2.0 \
-    vendor.display.config@2.0.vendor \
-    vendor.oneplus.hardware.display@1.0.vendor \
     vendor.qti.hardware.display.allocator-service \
     vendor.qti.hardware.display.composer-service \
     vendor.qti.hardware.display.mapper@1.0.vendor \
@@ -214,13 +184,18 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.display.mapper@3.0.vendor \
     vendor.qti.hardware.display.mapper@4.0.vendor
 
-PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.opengles.aep.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.opengles.aep.xml \
-    frameworks/native/data/etc/android.hardware.vulkan.compute-0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.vulkan.compute-0.xml \
-    frameworks/native/data/etc/android.hardware.vulkan.level-1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.vulkan.level-1.xml \
-    frameworks/native/data/etc/android.hardware.vulkan.version-1_1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.vulkan.version-1_1.xml \
-    frameworks/native/data/etc/android.software.vulkan.deqp.level-2020-03-01.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.vulkan.deqp.level.xml
+PRODUCT_PACKAGES += \
+    vendor.display.config@1.15.vendor \
+    vendor.display.config@2.0.vendor
 
+PRODUCT_PACKAGES += \
+    libdisplayconfig.qti \
+    libdisplayconfig.qti.vendor \
+    libqdMetaData \
+    libtinyxml \
+    memtrack.default \
+    vndservicemanager
+    
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.3.vendor \
