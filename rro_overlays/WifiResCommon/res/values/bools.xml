@@ -12,6 +12,9 @@
          is no longer indicative, and a separate config now exists for each band -->
     <bool name="config_wifi5ghzSupport">true</bool>
 
+    <!-- Wifi driver supports 6GHz band for softap -->
+    <bool name="config_wifiSoftap6ghzSupported">true</bool>
+
     <!-- Wifi driver Automatic channel selection (ACS) for softap to include DFS channels -->
     <bool name="config_wifiSoftapAcsIncludeDfs">true</bool>
 
@@ -21,20 +24,14 @@
          capability can provide power savings when wifi needs to be always kept on. -->
     <bool name="config_wifi_background_scan_support">true</bool>
 
-    <!-- Wifi driver supports batched scan -->
-    <bool name="config_wifi_batched_scan_supported">true</bool>
-
     <!-- Indicates that connected MAC randomization is supported on this device -->
     <bool name="config_wifi_connected_mac_randomization_supported">true</bool>
 
-    <!-- dual sap mode is supported on this device. -->
-    <bool name="config_wifi_dual_sap_mode_enabled">true</bool>
+    <!-- Boolean indicating that wifi only link configuratios that have exact same credentials (i.e PSK) -->
+    <bool name="config_wifi_only_link_same_credential_configurations">false</bool>
 
     <!-- Indicates that p2p MAC randomization is supported on this device -->
     <bool name="config_wifi_p2p_mac_randomization_supported">true</bool>
-
-    <!-- Boolean to provide support to keep wifi5 symbol for 8SS supported device and 11ax AP -->
-    <bool name="config_wifi_report_he_ready">true</bool>
 
     <!-- Wifi driver supports Automatic channel selection (ACS) for softap -->
     <bool name="config_wifi_softap_acs_supported">true</bool>
@@ -44,24 +41,4 @@
 
     <!-- Wifi driver supports WPA3 Simultaneous Authentication of Equals (WPA3-SAE) for softap -->
     <bool name="config_wifi_softap_sae_supported">true</bool>
-
-    <!-- boolean indicating whether the WiFi chipset has 6GHz band support -->
-    <bool translatable="false" name="config_wifi6ghzSupport">true</bool>
-
-    <!-- Wifi driver supports 6GHz band for softap -->
-    <bool translatable="false" name="config_wifiSoftap6ghzSupported">true</bool>
-
-    <!-- Indicates that 11ax mode is supported on this device
-           Note that if this flag is set to true, then 11ax is assumed to be supported.
-           However, if it is left to the default value of false, the 11ax support will
-           be checked via NL80211 interface -->
-    <bool translatable="false" name="config_wifi11axSupportOverride">true</bool>
-
-    <!-- Integer thresholds, do not connect to APs with RSSI lower than these values  -->
-    <integer translatable="false" name="config_wifi_framework_wifi_score_entry_rssi_threshold_5GHz">-85</integer>
-    <integer translatable="false" name="config_wifi_framework_wifi_score_entry_rssi_threshold_24GHz">-80</integer>
-    
-    <!-- Integer thresholds for low network score, should be somewhat less than the entry thresholds -->
-    <integer translatable="false" name="config_wifi_framework_wifi_score_bad_rssi_threshold_5GHz">-90</integer>
-    <integer translatable="false" name="config_wifi_framework_wifi_score_bad_rssi_threshold_24GHz">-83</integer>
 </resources>
