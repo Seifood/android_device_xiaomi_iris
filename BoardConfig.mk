@@ -225,9 +225,9 @@ TARGET_USES_MKE2FS := true
 OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
 
 # RIL
-CUSTOM_APNS_FILE := $(DEVICE_PATH)/configs/apns-conf-p.xml
-CUSTOM_APNS_FILE := $(DEVICE_PATH)/configs/apns-conf-s.xml
-ENABLE_VENDOR_RIL_SERVICE := true
+#CUSTOM_APNS_FILE := $(DEVICE_PATH)/configs/apns-conf-p.xml
+#CUSTOM_APNS_FILE := $(DEVICE_PATH)/configs/apns-conf-s.xml
+#ENABLE_VENDOR_RIL_SERVICE := true
 
 # Security Patch Level
 VENDOR_SECURITY_PATCH := 2022-10-01
