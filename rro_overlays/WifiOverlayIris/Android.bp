@@ -1,0 +1,6 @@
+runtime_resource_overlay {
+    name: "WifiOverlayIris",
+    theme: "WifiOverlay",
+    sdk_version: "current",
+    product_specific: true
+}
