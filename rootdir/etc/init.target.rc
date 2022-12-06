@@ -131,7 +131,10 @@ on post-fs-data
     mount ext4 /dev/block/platform/soc/4804000.ufshc/by-name/cust  /mnt/cust rw nosuid nodev barrier=1
     chown system system /mnt/cust
     chmod 0775 /mnt/cust
-
+    
+    # DT2W
+    chown system system /proc/tp_gesture
+    chmod 0644 /proc/tp_gesture
 
 
 on early-boot
@@ -263,6 +266,16 @@ on charger
     setprop sys.usb.configfs 1
     #The voltage of vbus is limited to 9V
     setprop persist.vendor.chg.max_volt_mv 9000
+
+    on property:init.svc.vendor.nv_mac=stopped
+    start vendor.btmac-sh
+
+service vendor.btmac-sh /vendor/bin/init.mi.btmac.sh
+    class late_start
+    user system
+    group system bluetooth wifi
+    oneshot
+    disabled
 
     #thermal
     start mi_thermald
