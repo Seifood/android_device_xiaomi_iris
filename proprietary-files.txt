@@ -108,6 +108,7 @@ system_ext/etc/permissions/audiosphere.xml
 system_ext/framework/audiosphere.jar
 vendor/lib/soundfx/libasphere.so
 vendor/lib/soundfx/libshoebox.so
+vendor/lib64/libQTEEConnector_listener.so
 
 # Audio Hardware
 vendor/lib/hw/audio.primary.holi.so
@@ -768,10 +769,7 @@ vendor/bin/msm_irqbalance
 vendor/etc/msm_irqbalance.conf
 
 # Fingerprint
-vendor/etc/permissions/com.fingerprints.extension.xml
--vendor/framework/com.fingerprints.extension.jar
--vendor/lib64/hw/fingerprint.default.so:vendor/lib64/hw/fingerprint.fpc.default.so
-vendor/lib64/com.fingerprints.extension@1.0.so
+-vendor/lib64/hw/fingerprint.default.so:vendor/lib64/hw/fingerprint.fpc.sm4350.so
 -vendor/lib64/vendor.qti.hardware.fingerprint@1.0.so
 
 # HotwordEnrollment
@@ -1263,6 +1261,7 @@ vendor/lib64/libsnsapi.so
 vendor/lib64/libsnsdiaglog.so
 vendor/lib64/libssc.so
 vendor/lib64/libssc_default_listener.so
+vendor/lib64/libwpa_client.so
 vendor/lib64/sensors.ssc.so
 vendor/lib64/vendor.qti.hardware.sensorscalibrate@1.0.so
 
