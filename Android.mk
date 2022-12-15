@@ -6,7 +6,7 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifneq ($(filter iris,$(TARGET_DEVICE)),)
+ifeq ($(TARGET_DEVICE),iris)
 
 include $(call all-makefiles-under,$(LOCAL_PATH))
 
