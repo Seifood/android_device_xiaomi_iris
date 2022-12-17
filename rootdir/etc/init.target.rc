@@ -77,10 +77,7 @@ on init
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
     start logd
-
-on early-fs
-    start vold
-
+    
 on fs
     start hwservicemanager
     mount_all --early
@@ -93,10 +90,6 @@ on fs
     mount ext4 /dev/block/platform/soc/4804000.ufshc/by-name/rescue /mnt/rescue noatime
     chown system system /mnt/rescue
     chmod 0771 /mnt/rescue
-
-on post-fs
-    # set RLIMIT_MEMLOCK to 64MB
-    setrlimit 8 67108864 67108864
 
 on late-fs
     wait_for_prop hwservicemanager.ready true
