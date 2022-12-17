@@ -1,5 +1,9 @@
 # DPM
 persist.vendor.dpm.feature=11
 
+# Telephony
+ro.telephony.sim_slots.count=1
+telephony.active_modems.max_count=2
+
 # Media
 vendor.media.target_variant=_holi
