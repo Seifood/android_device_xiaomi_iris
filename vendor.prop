@@ -146,7 +146,7 @@ camera.disable_zsl_mode=true
 
 # SoC
 ro.soc.manufacturer=QTI
-ro.soc.model=SM6375
+ro.soc.model=SM4350
 
 # Crypto
 ro.crypto.dm_default_key.options_format.version=2
@@ -236,9 +236,6 @@ vendor.gralloc.disable_ubwc=0
 # Media
 debug.stagefright.ccodec=4
 debug.stagefright.omx_default_rank=0
-
-# NFC
-ro.vendor.se.type=HCE,UICC
 
 # Radio
 keyguard.no_require_sim=true
