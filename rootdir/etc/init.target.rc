@@ -129,6 +129,8 @@ on post-fs-data
     chown system system /proc/tp_gesture
     chmod 0644 /proc/tp_gesture
 
+ # Load WLAN driver
+    insmod /vendor/lib/modules/qca_cld3_wlan.ko
 
 on early-boot
     start vendor.sensors
