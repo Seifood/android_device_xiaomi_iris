@@ -270,8 +270,6 @@ service vendor.btmac-sh /vendor/bin/init.mi.btmac.sh
     oneshot
     disabled
 
-    #thermal
-    start mi_thermald
 #pd-mapper
 service vendor.pd_mapper /vendor/bin/pd-mapper
     class core
