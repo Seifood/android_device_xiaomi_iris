@@ -244,10 +244,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.1.vendor
 
-# Modules
-PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/prebuilt/modules/,$(TARGET_COPY_OUT_VENDOR)/lib/modules)
-
 # Media
 PRODUCT_PACKAGES += \
     libavservices_minijail \
