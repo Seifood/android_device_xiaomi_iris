@@ -121,7 +121,7 @@ TARGET_KERNEL_CONFIG := holi_QGKI
 TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/iris/kernel
 BOARD_PREBUILT_DTBIMAGE_DIR := $(DEVICE_PATH)/prebuilt/iris/dtb
 PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,$(DEVICE_PATH)prebuilt/modules/,$(TARGET_COPY_OUT_VENDOR)/lib/modules)
+    $(call find-copy-subdir-files,*,$(DEVICE_PATH)/prebuilt/modules/,$(TARGET_COPY_OUT_VENDOR)/lib/modules)
 
 # Media
 TARGET_USES_ION := true
