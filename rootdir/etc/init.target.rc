@@ -129,10 +129,10 @@ on post-fs-data
     chown system system /proc/tp_gesture
     chmod 0644 /proc/tp_gesture
 
- # Load WLAN driver
+# Load WLAN driver
     insmod /vendor/lib/modules/qca_cld3_wlan.ko
 
-on early-boot
+# Sensors
     start vendor.sensors
 
 #BSP.Touch - 2021.02.08 - edit for panelcolor start
@@ -259,6 +259,7 @@ on charger
     start vendor.power_off_alarm
     setprop sys.usb.controller 4e00000.dwc3
     setprop sys.usb.configfs 1
+    start mi_thermald
     #The voltage of vbus is limited to 9V
     setprop persist.vendor.chg.max_volt_mv 9000
 
@@ -271,12 +272,13 @@ service vendor.btmac-sh /vendor/bin/init.mi.btmac.sh
     group system bluetooth wifi
     oneshot
     disabled
-
+    
 #pd-mapper
 service vendor.pd_mapper /vendor/bin/pd-mapper
     class core
     user system
     group system
+    task_profiles ServiceCapacityLow
 
 #Peripheral manager
 service vendor.per_mgr /vendor/bin/pm-service
@@ -284,12 +286,14 @@ service vendor.per_mgr /vendor/bin/pm-service
     user system
     group system
     ioprio rt 4
+    task_profiles ServiceCapacityLow
 
 service vendor.per_proxy /vendor/bin/pm-proxy
     class core
     user system
     group system
     disabled
+    task_profiles ServiceCapacityLow
 
 on property:persist.odm.ril.oem.sno=*
     setprop ro.ril.oem.sno ${persist.odm.ril.oem.sno}
@@ -432,6 +436,7 @@ service displayfeature /vendor/bin/displayfeature
     class late_start
     user root
     group root
+    task_profiles ServiceCapacityLow
 
 on property:init.svc.surfaceflinger=stopped
     stop displayfeature
@@ -441,4 +446,3 @@ on property:init.svc.surfaceflinger=running
 
 on property:init.svc.surfaceflinger=restarting
     stop displayfeature
-
