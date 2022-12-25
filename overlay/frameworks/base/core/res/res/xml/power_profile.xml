@@ -105,4 +105,6 @@
         <value>0</value>
     </array>
     <item name="gps.voltage">0</item>
+    <allow-in-power-save package="com.google.android.gms"/>
+    <allow-in-data-usage-save package="com.google.android.gms"/>
 </device>
