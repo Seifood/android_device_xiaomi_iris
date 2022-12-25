@@ -239,30 +239,30 @@ debug.stagefright.ccodec=4
 debug.stagefright.omx_default_rank=0
 
 # Radio
-persist.radio.multisim.config=dsds
+# Radio
+persist.radio.snapshot_enabled=0
+persist.radio.snapshot_timer=0
+persist.rcs.otp_sms_port=0
+persist.rcs.supported=1
 persist.vendor.data.iwlan.enable=true
-persist.vendor.radio.add_power_save=1
+persist.vendor.radio.5g_mode_pref=1
 persist.vendor.radio.apm_sim_not_pwdn=1
-persist.vendor.radio.atfwd.start=true
+persist.vendor.radio.arfcn_test_mode=3
+persist.vendor.radio.bar_fake_gcell=1
 persist.vendor.radio.custom_ecc=1
 persist.vendor.radio.data_con_rprt=1
 persist.vendor.radio.data_ltd_sys_ind=1
+persist.vendor.radio.efssync=true
 persist.vendor.radio.enableadvancedscan=true
-persist.vendor.radio.enable_temp_dds=true
-persist.vendor.radio.force_ltd_sys_ind=1
-persist.vendor.radio.manual_nw_rej_ct=1
-persist.vendor.radio.mt_sms_ack=30
+persist.vendor.radio.force_on_dc=true
+persist.vendor.radio.ignore_dom_time=10
 persist.vendor.radio.procedure_bytes=SKIP
 persist.vendor.radio.process_sups_ind=1
 persist.vendor.radio.rat_on=combine
 persist.vendor.radio.sib16_support=1
-persist.vendor.radio.snapshot_enabled=1
-persist.vendor.radio.snapshot_timer=5
-vendor.rild.libpath=/vendor/lib64/libril-qc-hal-qmi.so
+persist.vendor.radio.uicc_se_enabled=true
 ro.com.android.dataroaming=false
-ro.telephony.default_network=22,22
-ro.vendor.se.type=HCE,UICC,eSE
-telephony.lteOnCdmaDevice=1
+vendor.rild.libpath=/vendor/lib64/libril-qc-hal-qmi.so
 
 # Perf
 ro.vendor.extension_library=libqti-perfd-client.so
