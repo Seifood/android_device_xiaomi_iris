@@ -531,9 +531,5 @@ PRODUCT_PACKAGES += \
 PRODUCT_BOOT_JARS += \
     WfdCommon
 
-# XiaomiParts
-PRODUCT_PACKAGES += \
-    XiaomiParts
-
 # Inherit the proprietary files
 include vendor/xiaomi/iris/iris-vendor.mk
