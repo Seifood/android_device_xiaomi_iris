@@ -124,9 +124,6 @@ on post-fs-data
     mount ext4 /dev/block/platform/soc/4804000.ufshc/by-name/cust  /mnt/cust rw nosuid nodev barrier=1
     chown system system /mnt/cust
     chmod 0775 /mnt/cust
-    
-# Load WLAN driver
-    insmod /vendor/lib/modules/qca_cld3_wlan.ko
 
 # Sensors
     start vendor.sensors
