@@ -694,6 +694,9 @@
         <item>150</item>
     </array>
 
-<!-- ProximityCheckOnWake -->
+    <!-- ProximityCheckOnWake -->
     <bool name="config_proximityCheckOnWake">false</bool>
+
+    <!-- Pocket Lock -->
+    <bool name="config_pocketModeSupported">false</bool>
 </resources>
