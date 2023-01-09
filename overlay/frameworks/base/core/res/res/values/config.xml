@@ -693,4 +693,7 @@
         <item>910</item>
         <item>150</item>
     </array>
+
+<!-- ProximityCheckOnWake -->
+    <bool name="config_proximityCheckOnWake">false</bool>
 </resources>
